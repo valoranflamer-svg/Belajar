@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Siswa</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Data Siswa</h1>
+
+        <p class="subtitle">
+            Masukkan data kamu di bawah.
+        </p>
+
+        <form action="/proses" method="POST">
+
+            <label>Nama</label>
+            <input
+                type="text"
+                name="nama"
+                placeholder="Masukkan nama"
+                required
+            >
+
+            <label>Umur</label>
+            <input
+                type="number"
+                name="umur"
+                placeholder="Masukkan umur"
+                required
+            >
+
+            <label>Sekolah</label>
+            <input
+                type="text"
+                name="sekolah"
+                placeholder="Masukkan sekolah"
+                required
+            >
+
+            <button type="submit">
+                Kirim Data
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
